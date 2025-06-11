@@ -1,0 +1,38 @@
+/* following is a universal selector which sets the ruleset to all the elements in a code.
+* {
+    ruleset
+}
+*/
+
+html {
+    font-family: monospace;
+}
+
+body {
+    font-size: 22px;
+}
+
+h1, h2 {
+    color: darkblue;
+}
+
+p {
+    color: purple;
+}
+
+p {
+    color: red;
+}
+
+p span {
+    text-transform: uppercase;
+    color: gold;
+}
+
+.gray {
+    color: gray;
+}
+
+#second {
+    color: aqua;
+}
