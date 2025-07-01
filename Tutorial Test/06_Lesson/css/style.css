@@ -1,0 +1,16 @@
+body {
+    padding: 10%;
+    font-size: 2rem;
+}
+
+/* button, input {
+    font-size: inherit;
+} */
+
+p {
+    /* text-transform:lowercase;
+    text-decoration:overline; */
+    line-height: 1.5;
+     font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+}
