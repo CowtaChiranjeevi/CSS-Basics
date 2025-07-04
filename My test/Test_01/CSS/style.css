@@ -1,0 +1,48 @@
+header {
+    font-size: 48px;
+}
+
+body {
+    padding: 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 249, 239);
+    font-size: 1rem;
+}
+
+h1, h2 {
+    padding: 1%;
+    border: 2px solid #000;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 4rem;
+    color:rgb(255, 255, 255);
+    outline: 4ch solid rgba(241, 210, 210, 0.521);
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    
+}
+
+p {
+    
+    text-align:center;
+    color: rgb(39, 106, 165);
+}
+
+.best { 
+    padding: 0.5rem;
+    font-style: italic;
+    word-spacing: 40px;
+}
+
+.secondbest {
+    letter-spacing: 6px;
+
+}
+
+#the2second {
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6rem;
+}
+
+/* Example of comment in CSS */
