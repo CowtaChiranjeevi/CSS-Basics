@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
+
+
+
+/* || Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* || Variables */
+:root {
+    /* Colours */
+    --LIGHT: snow;
+    --DARK: black;
+    --LESS-DARK: #222;
+    --BG-FADE: rgb(252,220,160);
+    --BGCOLOR: orange;
+    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR),var(--BGCOLOR));
+    --BODYBG: gray;
+    /* Font */
+    --BASIC-FONT: nunito, sans-serif;
+    --Heading-Font: Fugaz One;
+    --FS-XL: clamp(1rem, 4vh, 3rem);
+    /* Borders */
+    --BASIC-BORDER: 2px solid #000;
+    --Light-BORDER: 3px solid #fff;
+}
+
+img {
+    display: block;
+}
+
+
+html {
+    font-family: nunito, sans-serif;
+    scroll-behavior: smooth;
+    background-image: var(--BGIMAGE);
+}
+
+body {
+    color: var(--LIGHT);
+    max-width: 800px;
+    min-height: 120vh;
+    margin: 0 auto;
+    background-color: var(--BODYBG);
+    padding: 0;
+}
+
+main {
+    margin-block-start: 108px;
+}
+
+
+/* CLASSES STYLING START */
+
+.header {
+    font-family: var(--Heading-Font);
+    letter-spacing: 3px;
+    padding: 10px 0px;
+}
+
+.margin {
+    margin-left: 15px;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.offscreen {
+    position: absolute;
+    left: -2000px;
+}
+
+/* CLASSES STYLING END */
+
+
+
+/* || TABLE STYLING END */
+
+
+
+
+/* Media Queries */
+/* @media screen and (min-width: 800px) { 
+    body {
+        margin: 0 300px;        
+    }
+} */
+
+
+
+
