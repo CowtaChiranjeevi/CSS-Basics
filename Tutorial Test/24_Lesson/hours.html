@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hours</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta name="author" content="Dave Gray">
+    <meta name="description" content="Store Hours for The Little Taco Shop">
+    <title>LTS Hours</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-    <header>
-        <h1>🌮 Little Taco Shop 🌮</h1>
-        <!-- NAV -->
-         <section class="nav">
-        <nav>
-            <ul>
-                <li><a href="index.html">Menu</a></li>
-                <li><a href="hours.html">Hours</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
+     <header class="header">
+        <h1 class="header__h1">Little Taco Shop</h1>
+        <nav class="header__nav">
+            <ul class="header__ul">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#menu">Menu</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
             </ul>
         </nav>
-        </section>
     </header>
-
-    <main>
-        <section class="main-img">
-        <img src="IMG/tacos_tray_1000x667.png" alt="Tacos Tray" title="We love trays of Tacos!" width="100%" height="100%">
-        </section>
-        <section class="margin">     
-        <h2 class="header">Hours</h2>
-        <p>We are open 7 days a week!</p>
-        <p>Sunday-Thursday</p>
-        <p><time datetime="11:00">11am</time>-<time datetime="21:00">9pm</time></p>
-        <p>Friday-Saturday</p>
-        <p><time datetime="11:00">11am</time>-<time datetime="23:00">11pm</time></p>
-        </section>
-
-
-
+    <section>
+        <figure>
+            <img src="img/tacos_tray_1000x667.png" alt="A Tray of Tasty Tacos" title="We love trays of tacos!"
+                width="1000" height="667">
+            <figcaption class="offscreen">
+                A Tray of Tasty Tacos
+            </figcaption>
+        </figure>
+    </section>
+    <main>  
+        <h2 class="heading">Hours</h2>
+        <p>
+            We are open 7 days a week!
+        </p>
+        <dl>
+            <dt>Sunday-Thursday</dt>
+            <dd>11am-9pm</dd>
+            <dt>Friday-Saturday</dt>
+            <dd>11am-11pm</dd>
+        </dl>
+        
     </main>
-
-    <footer>
-        <h3>Copyright &copy; 2025 Little Taco Shop </h3>
+    <hr>
+    <footer class="footer">
+        <p>Copyright &copy; The Little Taco Shop</p>
     </footer>
 </body>
+
 </html>

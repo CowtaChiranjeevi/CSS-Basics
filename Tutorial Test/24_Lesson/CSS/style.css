@@ -1,98 +1,211 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
 @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito&display=swap');
 
-
-
-/* || Reset */
+/* Reset */
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* || Variables */
-:root {
-    /* Colours */
-    --LIGHT: snow;
-    --DARK: black;
-    --LESS-DARK: #222;
-    --BG-FADE: rgb(252,220,160);
-    --BGCOLOR: orange;
-    --BGIMAGE: linear-gradient(to bottom, var(--BGCOLOR),var(--BGCOLOR));
-    --BODYBG: gray;
-    /* Font */
-    --BASIC-FONT: nunito, sans-serif;
-    --Heading-Font: Fugaz One;
-    --FS-XL: clamp(1rem, 4vh, 3rem);
-    /* Borders */
-    --BASIC-BORDER: 2px solid #000;
-    --Light-BORDER: 3px solid #fff;
+html {
+    font-size: var(--Font-Size);
+    scroll-behavior: smooth;
+    background-image: var(--Blend-MainBG);
+}
+
+body {
+    min-height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    /* padding: 1rem; */
+    border-left: var(--Body-Border);
+    border-right: var(--Body-Border);
+    background-color: var(--Body-BGColor);
+    color: var(--Body-Color);
+    font-family: var(--Main-FontF);
+    box-shadow: var(--Body-Box-Shadow);
+}
+
+main {
+    margin: 0 1rem;
 }
 
 img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
-
-html {
-    font-family: nunito, sans-serif;
-    scroll-behavior: smooth;
-    background-image: var(--BGIMAGE);
+p {
+    line-height: 1.5;
 }
 
-body {
-    color: var(--LIGHT);
-    max-width: 800px;
-    min-height: 120vh;
-    margin: 0 auto;
-    background-color: var(--BODYBG);
-    padding: 0;
+/* Variables */
+:root {
+    /* Colors */
+    --Main-BGC: orange;
+    --Secondary-BGC: rgb(252, 220, 160);
+    --Blend-MainBG: linear-gradient(to bottom, var(--Main-BGC),var(--Secondary-BGC));
+    --Header-BG: black;
+    --Header-Color: white;
+    --Nav-BGColor: white;
+    --Nav-Color: black;
+    --Body-BGColor: white;
+    --Body-Color: black;
+    --Link-Hover: rgba(0, 0, 0, 0.511);
+    --Link-Active: orange;
+    --Hero-BG: rgba(51, 178, 51, 0.75);
+    --Hero-Color: white;
+    --Heading-Color: rgb(51, 178, 51);
+    /* Font */
+    --Heading-FontF: "Fugaz One", nunito;
+    --Main-FontF: nunito;
+    --Font-Size: clamp(1rem, 2.2vh, 1.5rem);
+    /* Shadow */
+    --Body-Box-Shadow: 5px 0 10px rgba(2, 2, 2, 0.272), -5px 0 10px rgba(2, 2, 2, 0.272);
+    --Header-Box-Shadow: 0px 5px 5px rgba(2, 2, 2, 0.272);
+    --Hero-Text-Shadow: 5px 5px 5px rgba(0, 0, 0, 0.502);
+    /* Border */
+    --Body-Border: 1px solid #333;
+    --Table-Border: 1px solid #333;
 }
 
-main {
-    margin-block-start: 108px;
-}
-
-
-/* CLASSES STYLING START */
-
-.header {
-    font-family: var(--Heading-Font);
-    letter-spacing: 3px;
-    padding: 10px 0px;
-}
-
-.margin {
-    margin-left: 15px;
-}
-
-.wrap {
-    display: flex;
-    flex-wrap: wrap;
-}
-
+/* Utility Classes */
 .offscreen {
     position: absolute;
-    left: -2000px;
+    left: -10000px;
 }
 
-/* CLASSES STYLING END */
+.hero {
+    position: absolute;
+    margin: 1rem 1rem;
+    color: var(--Hero-Color);
+    background-color: var(--Hero-BG);
+    text-shadow: var(--Hero-Text-Shadow);
+    font-family: var(--Heading-FontF);
+    
+    transform: skewX(-5deg);
+    transform: skewY(-5deg);
+    
+}
+
+.heading {
+    font-family: var(--Heading-FontF);
+    margin: 1rem 0;
+    color: var(--Heading-Color);
+    letter-spacing: 3px;
+}
 
 
 
-/* || TABLE STYLING END */
+/* Header styling */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: var(--Header-Box-Shadow);
+}
+
+.header__h1 {
+    color: var(--Header-Color);
+    background-color: var(--Header-BG);
+    text-align: center;
+    padding: 0.5rem 0;
+    font-family: var(--Heading-FontF);
+    letter-spacing: 3px;
+}
+
+.header__nav {
+    background-color: var(--Nav-BGColor);
+}
+
+.header__ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.25rem 0;
+}
+
+
+.header__ul li a {
+     color: var(--Nav-Color);
+    font-weight: bold;   
+}
+
+.header__ul li a:hover , .header__ul li a:focus  {
+     color: var(--Link-Hover);
+}
+
+.header__ul li a:active {
+    color: var(--Link-Active);
+}
+
+/* Styling Links class: link */
+a:active {
+    color: var(--Link-Active);
+}
+a:visited {
+    color: var(--Body-Color);
+}
+a:any-link {
+    color: var(--Body-Color);
+}
+a:hover, a:focus {
+    color: var(--Link-Hover);
+}
 
 
 
 
 /* Media Queries */
-/* @media screen and (min-width: 800px) { 
-    body {
-        margin: 0 300px;        
+@media screen and (min-width:576px) {
+    .header__h1:before , .header__h1::after {
+        content: " 🌮 ";
     }
-} */
+}
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        /* Colors */
+        --Main-BGC: black;
+        --Secondary-BGC: gray;
+        --Blend-MainBG: linear-gradient(to bottom, var(--Main-BGC),var(--Secondary-BGC));
+        --Header-BG: black;
+        --Header-Color: white;
+        --Nav-BGColor: #111;
+        --Nav-Color: white;
+        --Body-BGColor: #333;
+        --Body-Color: white;
+        --Link-Hover: orange;
+        --Link-Active: rgb(255, 179, 39);
+        --Hero-BG: rgba(51, 178, 51, 0.75);
+        --Hero-Color: black;
+        --Heading-Color: white;
+        /* Font */
+        --Heading-FontF: "Fugaz One", nunito;
+        --Main-FontF: nunito;
+        --Font-Size: clamp(1rem, 2.2vh, 1.5rem);
+        /* Shadow */
+        --Body-Box-Shadow: 5px 0 10px rgba(255, 255, 255, 0.272), -5px 0 10px rgba(255, 255, 255, 0.272);
+        --Header-Box-Shadow: 0px 5px 5px rgba(255, 255, 255, 0.272);
+        --Hero-Text-Shadow: 5px 5px 5px rgba(255, 255, 255, 0.502);
+        /* Border */
+        --Body-Border: 1px solid white;
+        --Table-Border: 1px solid white;
+    }
+}
 
 
+th, td, caption {
+    border: var(--Table-Border);
+    font-family: 'Courier New', Courier, monospace;
+    border-collapse: separate;
+    padding: 0.5rem;
+}
 
-
+.footer {
+    background-color: var(--Header-BG);
+    color: var(--Header-Color);
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
